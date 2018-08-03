@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">NameListApp</string>
+    <string name="app_name">Contacts</string>
+
+    <string name="fullname">%s %s</string>
+    <string name="nameslist">Details</string>
+    <string name="no_content_available">No names available.</string>
 </resources>

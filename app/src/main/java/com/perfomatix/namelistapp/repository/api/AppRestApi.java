@@ -1,6 +1,5 @@
 package com.perfomatix.namelistapp.repository.api;
 
-import com.google.gson.Gson;
 import com.perfomatix.namelistapp.BuildConfig;
 import com.perfomatix.namelistapp.utility.api.HeaderInterceptor;
 import com.perfomatix.namelistapp.utility.api.LiveDataCallAdapterFactory;
@@ -14,15 +13,18 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+/**
+ * Retrofit configuration class
+ */
 public class AppRestApi {
 
-    public static Retrofit getAppRestApiInstant(OkHttpClient okHttpClient, Gson gson) {
+    public static Retrofit getAppRestApiInstant(OkHttpClient okHttpClient) {
         return new Retrofit.Builder()
                 .baseUrl(BuildConfig.BASE_API_URL)
                 .addCallAdapterFactory(new LiveDataCallAdapterFactory())
                 .client(okHttpClient)
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                .addConverterFactory(GsonConverterFactory.create(gson))
+                .addConverterFactory(GsonConverterFactory.create())
                 .build();
     }
 

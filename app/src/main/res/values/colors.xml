@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#5E3D98</color>
+    <color name="colorPrimaryDark">#5E3D98</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="colorName">#323232</color>
+    <color name="colorCity">#3D3D3D</color>
+    <color name="colorLine">#DDDDDD</color>
+    <color name="colorWhite">#FFFFFF</color>
+    
+    <color name="colorOrange">#FF6F69</color>
+    <color name="colorYellow">#FFCC5C</color>
+    <color name="colorlightGreen">#88D8B0</color>
+    <color name="colorGreen">#75C95D</color>
+    <color name="colorViolet">#A884CA</color>
+    <color name="colorpurple">#D888B6</color>
+
+    <array name="avatarColors">
+        <item>@color/colorOrange</item>
+        <item>@color/colorYellow</item>
+        <item>@color/colorlightGreen</item>
+        <item>@color/colorGreen</item>
+        <item>@color/colorViolet</item>
+        <item>@color/colorpurple</item>
+    </array>
 </resources>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="person"
+            type="com.perfomatix.namelistapp.model.Person" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_row_height" >
+
+        <FrameLayout
+            android:id="@+id/img_user_layout"
+            android:layout_width="@dimen/avatar_height"
+            android:layout_height="@dimen/avatar_width"
+            android:background="@drawable/circle"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/avatar_left_margin">
+            <TextView
+                android:layout_gravity="center"
+                android:id="@+id/txt_avatar_letter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{person.firstName.substring(0,1)}"
+                android:textAllCaps="true"
+                android:fontFamily="@font/raleway_semibold"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/avatar_letter_size"/>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/img_user_layout"
+            android:layout_marginLeft="@dimen/user_details_view_left_margin">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/name_text_size"
+                android:fontFamily="@font/raleway_semibold"
+                android:textColor="@color/colorName"
+                android:layout_marginLeft="@dimen/name_text_margin_left"
+                android:text="@{@string/fullname(person.firstName, person.lastName)}"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/city_text_margin_top">
+                <ImageView
+                    android:id="@+id/image_location"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/ic_place_24px"
+                    android:layout_width="@dimen/location_image_width"
+                    android:layout_height="@dimen/location_image_height"
+                    android:layout_centerVertical="true"/>
+                <TextView
+                    android:layout_toRightOf="@+id/image_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/city_text_size"
+                    android:layout_marginLeft="@dimen/city_text_left_margin"
+                    android:textColor="@color/colorCity"
+                    android:text="@{person.city}"
+                    android:fontFamily="@font/raleway_regular"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_view_height"
+            android:background="@color/colorLine"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/line_view_left_margin"
+            android:layout_marginRight="@dimen/line_view_right_margin"
+            android:layout_marginTop="@dimen/line_margin_top"/>
+
+    </RelativeLayout>
+
+</layout>

@@ -4,6 +4,9 @@ package com.perfomatix.namelistapp.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+/**
+ * Model class to carry person details parsed from the JSON
+ */
 public class Person {
 
     @SerializedName("fname")
